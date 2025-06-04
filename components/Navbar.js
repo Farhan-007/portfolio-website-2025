@@ -32,7 +32,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="#hero"
-            className="font-signature font-serif italic text-2xl lg:border-r-4 border-dashed border-[#474747] pr-6"
+            className="font-signature font-serif italic text-2xl md:border-r-4 border-dashed border-[#474747] py-3 pr-6"
           >
             FA
           </Link>

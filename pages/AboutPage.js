@@ -4,13 +4,13 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const colors = [
-    "bg-red-500",
-    "bg-blue-500",
-    "bg-green-500",
-    "bg-yellow-400",
-    "bg-purple-500",
-    "bg-pink-500",
-    "bg-teal-500",
+    "bg-gradient-to-tr from-red-500 via-pink-500 to-yellow-400",
+    "bg-gradient-to-tr from-blue-500 via-teal-500 to-green-500",
+    "bg-gradient-to-tr from-green-500 via-yellow-400 to-red-500",
+    "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500",
+    "bg-gradient-to-tr from-purple-500 via-red-200 to-blue-500",
+    "bg-gradient-to-tr from-pink-500 via-yellow-400 to-green-500",
+    "bg-gradient-to-tr from-teal-500 via-blue-500 to-purple-500"
 ];
 
 const sentence = "Hello! I'm Farhan,"
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 ))}
                 <div
                     ref={containerRef}
-                    className='h-100 absolute -top-[80%]'
+                    className='h-100 absolute md:top-14 -top-[80%]'
                 />
             </div>
 
@@ -113,7 +113,7 @@ function AnimatedCard({ index, color, isInView }) {
                 animate={{
                     rotate: isInView ? 0 : index * 4,
                     left: isInView ? `${(8 - index) * 24 - 55}vw` : undefined,
-                    bottom: isInView ? `${(index + 1) * 40 -140}px` : undefined,
+                    bottom: isInView ? `${(index + 1) * 40 - 140}px` : undefined,
                 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
             />
